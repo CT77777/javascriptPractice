@@ -8,6 +8,7 @@ alert("1...");
 
 // 3. This statement selects the <h1> element and replaces its text with "BOOM!".
 document.querySelector("h1").textContent = "🔥BOOM!🔥";
+document.querySelector("main").innerHTML += "<h2>Ethereum</h2>";
 
 // 4. Log "Message destroyed!" to the console
 console.log("Message destroyed!");

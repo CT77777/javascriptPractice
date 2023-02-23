@@ -61,11 +61,18 @@ if (correctAnswerCount === 5) {
 } else if (correctAnswerCount === 2 || correctAnswerCount === 1) {
   rankOfPlayer = "Bronze";
 } else {
-  rankOfPlayer = "No crown";
+  rankOfPlayer = "no crown";
 }
 
 // 6. Output results to the <main> element
-document.querySelector(
-  "main"
-).innerHTML = `<h1>${correctAnswerCount} of 5 answers are correct.
-You are ranked ${rankOfPlayer} !</h1>`;
+if (rankOfPlayer === "no crown") {
+  document.querySelector(
+    "main"
+  ).innerHTML = `<h2>${correctAnswerCount} of 5 answers are correct.</h2> 
+    <p>You get <strong>${rankOfPlayer}</strong> ! 😭</p>`;
+} else {
+  document.querySelector(
+    "main"
+  ).innerHTML = `<h2>${correctAnswerCount} of 5 answers are correct.</h2> 
+    <p>You are ranked <strong>${rankOfPlayer}</strong> ! 🎉</p>`;
+}
